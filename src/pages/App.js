@@ -9,6 +9,11 @@ class App extends Component{
         }
     }
 
+    componentDidMount() {
+        setTimeout(() =>
+            this.setState({loading: false}), 1000)
+    }
+
     render() {
         return(
             <h1>loading : {JSON.stringify(this.state.loading)}</h1>
